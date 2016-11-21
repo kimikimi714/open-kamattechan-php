@@ -16,7 +16,6 @@ require('./bootstrap');
 Vue.component('comment', require('./components/Comment.vue'));
 Vue.component('rank', require('./components/Rank.vue'));
 Vue.component('list', require('./components/List.vue'));
-Vue.component('tabs', require('./components/Tabs.vue'));
 
 const app = new Vue({
     el: '#app'
