@@ -17,7 +17,7 @@
       return {
         name: "kimikimi714",
         accountUrl: "https://github.com/kimikimi714",
-        imageUrl: "/images/kimikimi714.jpeg"
+        imageUrl: "/storage/images/kimikimi714.jpeg"
       }
     }
   }
