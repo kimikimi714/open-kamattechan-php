@@ -6,10 +6,8 @@
     </div>
     <div class="col-md-8">
       <rank-header></rank-header>
+      <comment></comment>
     </div>
-  </div>
-  <div class="row">
-    <comment></comment>
   </div>
 </div>
 </template>
