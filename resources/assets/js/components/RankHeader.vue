@@ -1,12 +1,24 @@
 <template>
 <div class="media">
   <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="/images/animal_usagi_white.png" alt="user" width="128" height="128">
+    <a :href="accountUrl" target="_blank">
+      <img class="media-object" :src="imageUrl" :alt="name" width="128" height="128">
     </a>
   </div>
   <div class="media-body">
-    <h4 class="media-heading">name</h4>
+    <h class="media-heading"><a :href="accountUrl">{{ name }}</a></h4>
   </div>
 </div>
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        name: "kimikimi714",
+        accountUrl: "https://github.com/kimikimi714",
+        imageUrl: "/images/kimikimi714.jpeg"
+      }
+    }
+  }
+</script>
