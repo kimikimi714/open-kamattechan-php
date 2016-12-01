@@ -15,6 +15,7 @@ require('./bootstrap');
 
 Vue.component('comment', require('./components/Comment.vue'));
 Vue.component('rank', require('./components/Rank.vue'));
+Vue.component('rank-header', require('./components/RankHeader.vue'));
 Vue.component('list', require('./components/List.vue'));
 
 const app = new Vue({
