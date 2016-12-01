@@ -13,6 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/ranking/{type}', function ($type) {
-  return 'Ranking type: '.$type;
-});
+Route::resource('rankings', 'RankingController', ['only' => ['index', 'show',]]);
