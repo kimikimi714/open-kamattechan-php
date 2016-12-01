@@ -2,10 +2,10 @@
 <div>
   <div class="row">
     <div class="col-md-4">
-      XXth
+      <h1>XXth</h1>
     </div>
     <div class="col-md-8">
-      header
+      <rank-header></rank-header>
     </div>
   </div>
   <div class="row">
