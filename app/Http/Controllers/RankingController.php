@@ -13,19 +13,7 @@ class RankingController extends Controller
      */
     public function index()
     {
-      return response()->json([
-        'type' => 'weekly',
-        'rankings' => [
-          [
-            'rank' => 1,
-            'name' => 'hoge',
-          ],
-          [
-            'rank' => 1,
-            'name' => 'hoge',
-          ],
-        ]
-      ]);
+      return response()->json($this->getDummy());
     }
 
     /**
@@ -36,18 +24,42 @@ class RankingController extends Controller
      */
     public function show($type)
     {
-      return response()->json([
-        'type' => $type,
+      return response()->json($this->getDummy());
+    }
+
+    private function getDummy() {
+      return [
+        'type' => 'weekly',
         'rankings' => [
           [
             'rank' => 1,
-            'name' => 'hoge',
+            'user' => [
+              'name' => 'kimikimi714',
+              'profileUrl' => 'https://github.com/kimikimi714',
+              'imageUrl' => '/storage/images/kimikimi714.jpeg',
+            ],
+            'comment' => [
+              'text' => 'Good comment!',
+              'file' => 'hoge.php',
+              'line' => 2,
+              'reviewUrl' => 'https://github.com/kimikimi714/config/pull/2',
+            ],
           ],
           [
-            'rank' => 1,
-            'name' => 'hoge',
+            'rank' => 2,
+            'user' => [
+              'name' => 'kimikimi714',
+              'profileUrl' => 'https://github.com/kimikimi714',
+              'imageUrl' => '/storage/images/kimikimi714.jpeg',
+            ],
+            'comment' => [
+              'text' => 'Good comment!',
+              'file' => 'hoge.php',
+              'line' => 2,
+              'reviewUrl' => 'https://github.com/kimikimi714/config/pull/2',
+            ],
           ],
         ]
-      ]);
+      ];
     }
 }
