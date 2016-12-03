@@ -19,5 +19,14 @@ Vue.component('rank-header', require('./components/RankHeader.vue'));
 Vue.component('list', require('./components/List.vue'));
 
 const app = new Vue({
-    el: '#app'
+  el: '#app',
+  created: function() {
+    // GET request
+    var self = this
+    this.$http.get('http://localhost:8000/api/rankings').then((resource) => {
+        console.log(resource)
+    }, (resource) => {
+      // handle error
+    })
+  }
 });
