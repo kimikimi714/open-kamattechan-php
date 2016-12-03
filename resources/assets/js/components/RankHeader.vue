@@ -6,7 +6,7 @@
     </a>
   </div>
   <div class="media-body">
-    <h class="media-heading"><a :href="accountUrl">{{ name }}</a></h4>
+    <h4 class="media-heading"><a :href="accountUrl">{{ name }}</a></h4>
   </div>
 </div>
 </template>
