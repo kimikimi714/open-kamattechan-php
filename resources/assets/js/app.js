@@ -20,11 +20,16 @@ Vue.component('list', require('./components/List.vue'));
 
 const app = new Vue({
   el: '#app',
+  data: {
+    type: 'weekly',
+    rankings: [],
+  },
   created: function() {
     // GET request
     var self = this
     this.$http.get('http://localhost:8000/api/rankings').then((resource) => {
-        console.log(resource)
+      this.type = resource.body.type
+      this.rankings = resource.body.rankings
     }, (resource) => {
       // handle error
     })
