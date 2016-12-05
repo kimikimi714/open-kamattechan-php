@@ -1,21 +1,16 @@
 <template>
 <div class="panel panel-default">
   <div class="panel-body">
-    {{ comment }}
+    {{ comment.text }}
   </div>
   <div class="panel-footer text-right">
-    {{ fileName }}
+    <a :href="comment.reviewUrl">{{ comment.file }}</a> line: {{ comment.line }}
   </div>
 </div>
 </template>
 
 <script>
   export default {
-    data() {
-      return {
-        comment: "comment component",
-        fileName: "hoge.php"
-      }
-    }
+    props: ["comment"],
   }
 </script>
