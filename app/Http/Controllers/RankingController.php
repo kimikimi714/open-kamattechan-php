@@ -13,7 +13,9 @@ class RankingController extends Controller
      */
     public function index()
     {
-      return response()->json($this->getDummy());
+      $client = new \Github\Client();
+      $repositories = $client->api('user')->repositories('kimikimi714');
+      return response()->json($repositories);
     }
 
     /**
