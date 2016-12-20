@@ -23,8 +23,7 @@ class CreateReviewsTable extends Migration
             $table->unsignedTinyInteger('status')->default(0);
             $table->timestamps();
 
-            $table->primary('id');
-            $table->unique(['hosting_type', 'repository', 'number']);
+            $table->unique(['hosting_type', 'repository_url', 'number']);
             // $table->foreign('author_id')->references('id')->on('users');
         });
     }
