@@ -27,7 +27,7 @@ const app = new Vue({
   created: function() {
     // GET request
     var self = this
-    this.$http.get('http://localhost:8000/api/rankings').then((resource) => {
+    this.$http.get('http://kamattechan.dev/api/rankings').then((resource) => {
       this.type = resource.body.type
       this.rankings = resource.body.rankings
     }, (resource) => {
