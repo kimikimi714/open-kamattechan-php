@@ -13,7 +13,11 @@ class FetchGitHubRepo extends Command
      *
      * @var string
      */
-  protected $signature = 'fetch:github {owner} {repo} {--x|execute=false} {--number : Pull Request Number}';
+  protected $signature = 'fetch:github
+                        {owner: Repository owner name}
+                        {repo: Repository name}
+                        {--x|execute=false: if false, execute this command with dry run mode.}
+                        {--number : Pull Request Number}';
 
     /**
      * The console command description.
