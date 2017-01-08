@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
+  const OPEN = 0;
+  const CLOSED = 1;
   /**
    * The attributes that are mass assignable.
    *
