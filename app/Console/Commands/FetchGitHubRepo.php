@@ -77,7 +77,7 @@ class FetchGitHubRepo extends Command
               'url' => $pr['head']['user']['html_url'],
             ]);
             $review = \App\Review::updateOrCreate([
-              'status' => $pr['state'] === 'open' ? 0 : 1,
+              'status' => $pr['state'] === 'open' ? \Config('constants.review.status.open') : \Config('constants.review.status.closed'),
               'hosting_type' => 'github',
               'repository_url' => "https://github.com/${owner}/${repo}",
               'number' => (int)$pr['number'],
